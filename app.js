@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cors = require("cors");
 var cookieParser = require('cookie-parser');
 
-
+var homePage = require('./client/src/index');
 var testAPIRouter = require('./api/testAPI');
 var app = express();
 
@@ -23,11 +23,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.use(express.static(path.join(__dirname, 'client/public')));
   
-app.use('/', express.static('../client/build', {
-  index: "index.html"
-}))
+app.use('/',homePage);
   
 app.use("/testAPI", testAPIRouter);
   

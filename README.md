@@ -9,3 +9,11 @@ npm start
 
 
 http://localhost:9000/testAPI
+
+
+
+------------------------------------
+
+npm install express-generator -g
+express -v ejs -c sass domoticApp
+npm install

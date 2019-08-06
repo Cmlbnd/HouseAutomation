@@ -8,7 +8,7 @@ npm install cookie-parser
 npm start
 
 
-http://localhost:9000/testAPI
+http://localhost:9000/
 
 
 

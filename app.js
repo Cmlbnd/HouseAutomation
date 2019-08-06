@@ -7,7 +7,7 @@ var cors = require("cors");
 var cookieParser = require('cookie-parser');
 
 var homePage = require('./client/src/index');
-var testAPIRouter = require('./api/testAPI');
+var router = require('./api/router');
 var app = express();
 
 /*
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'client/public')));
   
 app.use('/',homePage);
   
-app.use("/testAPI", testAPIRouter);
+app.use("/api", router);
   
 
 
